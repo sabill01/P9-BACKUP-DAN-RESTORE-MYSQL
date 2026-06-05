@@ -1,23 +1,38 @@
 # README - Backup & Restore Database Perikanan
 
-## 🔧 PERINTAH INTI
+## PERINTAH INTI
 
-| Operasi | Perintah |
-|----------|----------|
-| **Backup** | `
-| **Restore** | 
-| **Verifikasi** | 
+Backup:
+mysqldump -u root perikanan > C:\backup\perikanan_backup.sql
 
+Restore:
+mysql -u root perikanan < C:\backup\perikanan_backup.sql
 
-## 📊 HASIL
+Verifikasi:
+mysql -u root -e "USE perikanan; SHOW TABLES;"
 
-| Kegiatan | Status |
-|----------|--------|
-| Backup | ✅ Berhasil |
-| Restore | ✅ Berhasil |
-| Jumlah Tabel | 9 tabel |
+---
 
+## HASIL
 
+Backup: Berhasil
+Restore: Berhasil
+Jumlah Tabel: 9 tabel
 
-## ✅ KESIMPULAN
-**Backup dan restore database perikanan berhasil 100%**
+---
+
+## LANGKAH CEPAT
+
+1. cd C:\xampp\mysql\bin
+2. mkdir C:\backup
+3. mysqldump -u root perikanan > C:\backup\perikanan_backup.sql
+4. mysql -u root perikanan < C:\backup\perikanan_backup.sql
+
+---
+
+## KESIMPULAN
+
+Backup dan restore database perikanan berhasil 100%
+
+---
+
